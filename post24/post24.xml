@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+<install version="1.5" type="plugin" group="vmshipment" >
+
+
+
+    <name>Omniva module for Virtuemart</name>
+
+
+
+    <creationDate>Märts 2012</creationDate>
+
+
+
+    <author>Aktsiamaailm OÜ</author>
+
+
+
+    <authorUrl>http://www.e-abi.ee</authorUrl>
+
+
+
+    <copyright>Copyright (C) 2012 Aktsiamaailm OÜ All rights reserved.</copyright>
+
+
+
+    <license>http://www.e-abi.ee/litsents Single User License</license>
+
+
+
+    <version>1.0</version>
+
+
+
+    <description>Omniva module for Virtuemart 2.0</description>
+
+
+
+    <languages>
+
+
+
+    <language tag="en-GB">en-GB.plg_vmshipment_post24.ini</language>
+    <language tag="et-EE">et-EE.plg_vmshipment_post24.ini</language>
+
+
+
+    </languages>
+
+
+
+    <files>
+
+
+
+	   <filename plugin="post24">post24.php</filename>
+
+
+
+    </files>
+
+
+
+    <params addpath="/administrator/components/com_virtuemart/elements">
+
+
+
+    	<param type="vmjpluginwarning" />
+
+            <param type="text" name="Client_Title" label="VMSHIPMENT_POST24_TITLE" description="VMSHIPMENT_POST24_TITLE_DESC" />
+
+            <param name="small" type="text" scope="com_virtuemart"  label="VMSHIPMENT_POST24_SMALL" description="example: 2.1" />
+
+            <param name="medium" type="text" scope="com_virtuemart"  label="VMSHIPMENT_POST24_MEDIUM" description="" />
+
+            <param name="large" type="text" scope="com_virtuemart"  label="VMSHIPMENT_POST24_LARGE" description="" />
+
+            <param name="Short_Names" type="list" default="1" label="VMSHIPMENT_POST24_SHOW_SORT" description="VMSHIPMENT_POST24_SHOW_SORT_DESC">
+
+        		<option value="1">VMSHIPMENT_POST24_SHOW_LONG_NAMES</option>
+
+        		<option value="0">VMSHIPMENT_POST24_SHOW_SHORT_NAMES</option>
+
+        	</param>
+
+            <param name="Sort_Names" type="list" default="1" label="VMSHIPMENT_POST24_SHOW_SORTS">
+
+        		<option value="1">VMSHIPMENT_POST24_YES</option>
+
+        		<option value="0">VMSHIPMENT_POST24_NO</option>
+
+    	   </param>
+
+            <param name="Free_Shipping" type="list" default="1" label="VMSHIPMENT_POST24_FREE_SHIPPING" description="..">
+
+        		<option value="1">VMSHIPMENT_POST24_YES</option>
+
+        		<option value="0">VMSHIPMENT_POST24_NO</option>
+
+        	</param>
+
+            <param name="Free_From" type="text" label="VMSHIPMENT_POST24_FREE_FROM" description="VMSHIPMENT_POST24_FREE_FROM_DESC" />
+
+            <param name="Only_Estonia" type="list" default="1" label="VMSHIPMENT_POST24_EST" description="..">
+
+        		<option value="1">VMSHIPMENT_POST24_EST_TRUE</option>
+
+        		<option value="0">VMSHIPMENT_POST24_EST_FALSE</option>
+
+        	</param>
+
+            <param name="calc_shipping" type="list" default="1" label="VMSHIPMENT_POST24_SHIPPING_FEE_CALC" description="..">
+
+        		<option value="1">VMSHIPMENT_POST24_SHIPPING_FEE_ITEM</option>
+
+        		<option value="0">VMSHIPMENT_POST24_SHIPPING_FEE_ORDER</option>
+
+        	</param>
+
+            <param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMSHIPMENT_POST24_TAX" description="..." />
+
+	   </params>
+
+    <fieldset addpath="/administrator/components/com_virtuemart/elements">
+
+	<field type="vmjpluginwarning" />
+
+        <field type="text" name="Client_Title" label="VMSHIPMENT_POST24_TITLE" description="VMSHIPMENT_POST24_TITLE_DESC" />
+
+        <field name="small" type="text" scope="com_virtuemart"  label="VMSHIPMENT_POST24_SMALL" description="example: 2.1" />
+
+        <field name="medium" type="text" scope="com_virtuemart"  label="VMSHIPMENT_POST24_MEDIUM" description="" />
+
+        <field name="large" type="text" scope="com_virtuemart"  label="VMSHIPMENT_POST24_LARGE" description="" />
+
+        <field name="Short_Names" type="list" default="1" label="VMSHIPMENT_POST24_SHOW_SORT" description="VMSHIPMENT_POST24_SHOW_SORT_DESC">
+
+    		<option value="1">VMSHIPMENT_POST24_SHOW_LONG_NAMES</option>
+
+    		<option value="0">VMSHIPMENT_POST24_SHOW_SHORT_NAMES</option>
+
+    	</field>
+
+        <field name="Sort_Names" type="list" default="1" label="VMSHIPMENT_POST24_SHOW_SORTS">
+
+    		<option value="1">VMSHIPMENT_POST24_YES</option>
+
+    		<option value="0">VMSHIPMENT_POST24_NO</option>
+
+    	</field>
+
+        <field name="Free_Shipping" type="list" default="1" label="VMSHIPMENT_POST24_FREE_SHIPPING" description="..">
+
+    		<option value="1">VMSHIPMENT_POST24_YES</option>
+
+    		<option value="0">VMSHIPMENT_POST24_NO</option>
+
+    	</field>
+
+        <field name="Free_From" type="text" label="VMSHIPMENT_POST24_FREE_FROM" description="VMSHIPMENT_POST24_FREE_FROM_DESC" />
+
+        <field name="Only_Estonia" type="list" default="1" label="VMSHIPMENT_POST24_EST" description="..">
+
+    		<option value="1">VMSHIPMENT_POST24_EST_TRUE</option>
+
+    		<option value="0">VMSHIPMENT_POST24_EST_FALSE</option>
+
+    	</field>
+
+        <field name="calc_shipping" type="list" default="1" label="VMSHIPMENT_POST24_SHIPPING_FEE_CALC" description="..">
+
+    		<option value="1">VMSHIPMENT_POST24_SHIPPING_FEE_ITEM</option>
+
+    		<option value="0">VMSHIPMENT_POST24_SHIPPING_FEE_ORDER</option>
+
+    	</field>
+
+        <field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMSHIPMENT_POST24_TAX" description="..." />
+
+    </fieldset>
+
+</install>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmpayment" >
+    <name>VM - Payment SAMPO</name>
+    <creationDate>Jaanuar 2011</creationDate>
+    <author>Aktsiamaailm OÜ</author>
+    <authorUrl>http://e-abi.ee/</authorUrl>
+    <copyright>Copyright (C) 2011 Aktsiamaailm OÜ . All rights reserved.</copyright>
+    <license>http://www.e-abi.ee/litsents</license>
+    <version>1.0</version>
+    <description>SAMPO Pangalink Virtuemart 2.0-le</description>
+    <languages>
+    	<language tag="en-GB">en-GB.plg_vmpayment_sampo.ini</language>
+        <language tag="et-EE">et-EE.plg_vmpayment_sampo.ini</language>
+    </languages>
+    <files>
+	   <filename plugin="sampo">sampo.php</filename>
+        <filename plugin="sampo">bank.php</filename>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+    	<param type="vmjpluginwarning" />
+    <param  name="payment_logos" type="vmfiles" label="VMPAYMENT_PAYPAL_LOGOS"
+                description="VMPAYMENT_PAYPAL_LOGOS_DESC"
+                directory="/images/stories/virtuemart/payment"
+                default="default" hide_default="1" hide_none="1"
+                stripext="0"  exclude="^_" />
+		<param name="url" type="text" label="VMPAYMENT_SAMPO_URL" description="VMPAYMENT_SAMPO_URL_DESC" />
+        <param name="VK_SND_ID" type="text"  label="VMPAYMENT_SAMPO_SND_ID" description="VMPAYMENT_SAMPO_SND_ID_DESC" />
+    	<param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_SAMPO_CURRENCY" description="VMPAYMENT_SAMPO_CURRENCY_DESC" />
+        <param name="priv_key" type="textarea" cols="30" rows="5" label="VMPAYMENT_SAMPO_PRIV" description="VMPAYMENT_SAMPO_PRIV_DESC" />
+        <param name="priv_pass" type="text"  label="VMPAYMENT_SAMPO_PRIV_PASS" description="VMPAYMENT_SAMPO_PRIV_PASS_DESC" />
+    	<param name="pub_key" type="textarea" cols="30" rows="5" label="VMPAYMENT_SAMPO_PUB" description="VMPAYMENT_SAMPO_PUB_DESC" />
+        <param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_SAMPO_STATUS_SUCCESS"  />
+    	<param name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_SAMPO_STATUS_FAILED" />
+        <param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_STANDARD_COUNTRIES" description="VMPAYMENT_STANDARD_COUNTRIES_DESC"/>
+    </params>
+</install>
